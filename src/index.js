@@ -1,3 +1,4 @@
+require('dotenv').config()
 const Discord = require('discord.js');
 const getAddress = require('./address');
 const client = new Discord.Client();
@@ -33,4 +34,4 @@ client.on('guildMemberAdd', member => {
   channel.send(`Welcome to the server, ${member}`);
 });
 
-client.login('NzU5NjMwODE4MjUwMzI2MDY2.X3ATVA.ju7tR58I8tUDRIoUNgx2BbzR_tY')
+client.login(process.env.BOT)
