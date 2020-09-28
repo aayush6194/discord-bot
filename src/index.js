@@ -44,6 +44,7 @@ client.on("message", async (msg) => {
     if(words.length !== 3) return;
     const task = words[0];
     const date = moment(words[2]).tz('America/Chicago')
+    date.subtract(5, 'hours');
     const time = (date.valueOf() - moment().tz('America/Chicago').valueOf());
 
     if(time < 1){
